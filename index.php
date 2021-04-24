@@ -1,10 +1,11 @@
 <?php
-#$cards = require('cards.php');
-$string = file_get_contents("cards.json");
-$cards = json_decode($string, true);
-print_r("cards",$cards);
-require('JourneyTravel.php');
+function custom_autoloader($class) {
+  include 'lib/' . $class . '.php';
+}
+ 
+spl_autoload_register('custom_autoloader');
 
-$journeyTravel = new JourneyTravel($cards);
+$json_file = "cards.json";
+$journeyTravel =journeyTravelFactory::create($json_file);
 $journeyTravel->sort();
-$cards = $journeyTravel->formatting();
+print $journeyTravel;
