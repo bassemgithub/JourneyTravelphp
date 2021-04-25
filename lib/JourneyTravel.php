@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 class JourneyTravel
 {
 
@@ -51,9 +51,6 @@ class JourneyTravel
 
     public function handleFirstLastCards()
     {
-        #$arrival = [];
-        #$departure = [];
-
         foreach ($this->cards as $key => $card) {
             $this->arrival[] = $card['to'];
             $this->departure[] = $card['from'];
