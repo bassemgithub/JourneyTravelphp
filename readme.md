@@ -10,6 +10,6 @@
 
 ## how to use  
 
-1) run `php index.php` to get the journey travel 
+1) To get the journey travel  run `php index.php` 
 
-2) to test run  `phpunit JourneyTravelTest.php`
+2) To test run  `phpunit JourneyTravelTest.php`
